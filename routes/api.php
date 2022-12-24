@@ -24,6 +24,7 @@ Route::get("/get",[ApiController::class, 'show'])->name("show");
 Route::post("/store",[ApiController::class, 'store'])->name("store");
 Route::post("/update/{id}",[ApiController::class, 'update'])->name("update");
 Route::post("/delete/{id}",[ApiController::class, 'delete'])->name("delete");
+Route::get("/search/{email}",[ApiController::class, 'search'])->name("search");
 
 
 

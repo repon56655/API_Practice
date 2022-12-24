@@ -81,5 +81,20 @@ class ApiController extends Controller
         }
 
     }
+    public function search($email){
+        $user_email = Api_model::where('email','like','%'.$email.'%')
+        ->get();
+
+        if(sizeof($user_email) == 0)
+        {
+            return "There are no data Found";
+        }
+
+        else
+        {
+            return $user_email;
+        }
+
+    }
 
 }
